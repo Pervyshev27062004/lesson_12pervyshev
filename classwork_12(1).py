@@ -9,3 +9,11 @@ DB_ECHO = True
 engine = create_engine(f"sqlite:////{DB_PATH}", echo=DB_ECHO)
 if not database_exists(engine.url):
     create_database(engine.url)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    user = User(email="test@test.com", password="password")
+    session.add(user)
+    session.commit()
+
