@@ -26,5 +26,5 @@ def change_user(firstname: str):
 
 
 if __name__ == "__main__":
-    #create_user("Maks", "Pervyshev", "king.by@gmail.com", "che,berlen", 18)
+    create_user("Serg", "KAsemir", "king.by@gmail.com", "che,berlen", 18)
     #change_user("")
